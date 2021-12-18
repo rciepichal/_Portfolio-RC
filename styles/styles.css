@@ -1,9 +1,66 @@
-@import url(variables);
+body {
+  background-color: #161853;
+}
+
+.toggler {
+  right: 1rem;
+  top: 1rem;
+  z-index: 1;
+  background: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #faedf0;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ec255a;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active #navigation {
+  left: 0;
+}
+
 .navigation {
-  width: 200px;
   height: 100vh;
   position: fixed;
+}
+
+#navigation {
+  position: fixed;
   top: 0;
-  left: 0;
+  width: 12.5rem;
+  left: -12.5rem;
+  bottom: 0;
+  z-index: 5;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.home {
+  overflow: hidden;
+}
+
+.home__wrapper-img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.home__wrapper-img .home__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  #navigation {
+    left: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

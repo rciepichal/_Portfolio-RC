@@ -1,9 +1,67 @@
-@import url(variables);
+@import "variables";
+@import "media";
 
+body {
+  background-color: $mainBlue;
+}
+
+// Mobile nav toggler
+.toggler {
+  right: 1rem;
+  top: 1rem;
+  z-index: 1;
+  background: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  color: $grey;
+  width: 3rem;
+  height: 3rem;
+  background-color: $orange;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+  #navigation {
+    left: 0;
+  }
+}
+
+// Nav section
 .navigation {
-  width: 200px;
   height: 100vh;
   position: fixed;
+}
+
+#navigation {
+  position: fixed;
   top: 0;
-  left: 0;
+  width: 12.5rem;
+  left: -12.5rem;
+  bottom: 0;
+  z-index: 5;
+  transition: all 0.5s;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+// Home section
+.home {
+  overflow: hidden;
+  &__wrapper {
+    &-img {
+      width: 100vw;
+      height: 100vh;
+      .home__img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #navigation {
+    left: 0;
+  }
 }

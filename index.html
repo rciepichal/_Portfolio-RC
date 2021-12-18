@@ -4,30 +4,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Front End Developer</title>
-    <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
-  <body>
+  <body class="">
     <!-- Main navigation -->
-    <nav class="navigation">
+    <div class="toggler mobile-nav-toggle d-lg-none d-flex align-items-center justify-content-center rounded position-fixed">
+      <i class="fas fa-list fs-1 toggler__icon"></i>
+    </div>
+    <nav class="navigation navbar navbar-light bg-light d-flex justify-content-between flex-column" id="navigation">
       <div class="navigation__media">
         <div class="navigation__img-wrapper">
           <img src="" alt="" class="img" />
         </div>
-        <h2 class="navigation__name">Radek</h2>
-        <p class="navigation__title">Front End Developer</p>
+        <h2 class="navigation__name h2">Radek</h2>
+        <p class="navigation__title fs-6">Front End Developer</p>
       </div>
+      <div class="navigation__main">
+        <ul class="nav flex-column">
+          <li class="nav-item d-flex justify-content-center">
+            <a href="#home" class="nav-link text-dark fs-6"> Home </a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a href="#about" class="nav-link text-dark fs-6"> About </a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a href="#skills" class="nav-link text-dark fs-6"> Skills </a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a href="#work" class="nav-link text-dark fs-6"> My work </a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a href="#contact" class="nav-link text-dark"> Contact </a>
+          </li>
+        </ul>
+      </div>
+      <footer class="navigation__footer text-center">
+        <p class="navigation__footer-text m-0">2021&copy; Radek</p>
+      </footer>
     </nav>
+    <!-- Home -->
+    <section class="home" id="home">
+      <div class="home__wrapper">
+        <div class="home__wrapper-img">
+          <img src="img/bckg.svg" alt="" class="home__img h-100 w-100" />
+        </div>
+      </div>
+    </section>
     <!-- About -->
-    <section class="about"></section>
+    <section class="about" id="about"></section>
     <!-- Skills -->
-    <section class="skills"></section>
+    <section class="skills" id="skills"></section>
     <!-- My works -->
-    <section class="work"></section>
+    <section class="work" id="work"></section>
     <!-- Contact -->
-    <section class="contact"></section>
+    <section class="contact" id="contact"></section>
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/5228e9581e.js" crossorigin="anonymous"></script>
     <script src="styles/bootstrap/bootstrap.bundle.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
