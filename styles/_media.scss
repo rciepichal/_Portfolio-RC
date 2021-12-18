@@ -1,0 +1,10 @@
+@media (min-width: 992px) {
+  #navigation {
+    left: 0;
+  }
+  .home {
+    &__wrapper {
+      margin-left: 12.5rem;
+    }
+  }
+}

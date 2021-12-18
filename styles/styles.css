@@ -29,6 +29,8 @@ body {
 .navigation {
   height: 100vh;
   position: fixed;
+  background-color: #292c6d;
+  color: #faedf0;
 }
 
 #navigation {
@@ -58,9 +60,33 @@ body {
      object-fit: cover;
 }
 
+.home__wrapper {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+}
+
+.about {
+  height: 1000px;
+}
+
 @media (min-width: 992px) {
   #navigation {
     left: 0;
+  }
+  .home__wrapper {
+    margin-left: 12.5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

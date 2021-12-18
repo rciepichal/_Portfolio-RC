@@ -1,5 +1,4 @@
 @import "variables";
-@import "media";
 
 body {
   background-color: $mainBlue;
@@ -32,6 +31,8 @@ body {
 .navigation {
   height: 100vh;
   position: fixed;
+  background-color: $blue;
+  color: $grey;
 }
 
 #navigation {
@@ -49,19 +50,29 @@ body {
 // Home section
 .home {
   overflow: hidden;
-  &__wrapper {
-    &-img {
-      width: 100vw;
-      height: 100vh;
-      .home__img {
-        object-fit: cover;
-      }
+  &__wrapper-img {
+    width: 100vw;
+    height: 100vh;
+    .home__img {
+      object-fit: cover;
     }
+  }
+  &__wrapper {
+    user-select: none;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    color: white;
   }
 }
 
-@media (min-width: 992px) {
-  #navigation {
-    left: 0;
-  }
+.about {
+  height: 1000px;
 }
+// Media import
+@import "media";
