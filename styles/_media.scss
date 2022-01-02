@@ -4,7 +4,25 @@
   }
   .home {
     &__wrapper {
-      margin-left: 12.5rem;
+      top: 50%;
+      left: 40%;
     }
+    &__wrapper-img {
+      .home__img {
+        left: 15%;
+      }
+    }
+  }
+  .about {
+    margin-left: 10rem;
+  }
+  .skills {
+    margin-left: 10rem;
+  }
+  .work {
+    margin-left: 10rem;
+  }
+  .contact {
+    margin-left: 10rem;
   }
 }
