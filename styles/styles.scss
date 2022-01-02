@@ -1,8 +1,9 @@
 @import "variables";
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
 body {
   background-color: $mainBlue;
   color: $grey;
+  font-family: "Roboto", sans-serif;
 }
 
 // Mobile nav toggler
@@ -12,20 +13,20 @@ body {
   z-index: 1;
   background: none;
   transition: all 0.4s;
-  outline: none;
   cursor: pointer;
   padding: 5px;
-  color: $grey;
   width: 3rem;
   height: 3rem;
   background-color: $orange;
+
+  &__icon {
+    text-decoration: none;
+    color: $grey !important;
+  }
 }
 
 .mobile-nav-active {
-  overflow: hidden;
-  #navigation {
-    left: 0;
-  }
+  left: 0 !important;
 }
 
 // Nav section
@@ -33,11 +34,6 @@ body {
   height: 100vh;
   position: fixed;
   background-color: $blue;
-  filter: opacity(0.95);
-}
-
-#navigation {
-  position: fixed;
   top: 0;
   width: 10rem;
   left: -10rem;
@@ -46,12 +42,23 @@ body {
   transition: all 0.5s;
   padding: 15px;
   overflow-y: auto;
+  &__main {
+    .navbar-nav {
+      .nav-item {
+        .active {
+          color: $orange;
+          text-shadow: 0px 0px 10px $orange;
+        }
+      }
+    }
+  }
 }
 
 // Home section
 .home {
   overflow: hidden;
-  border-bottom: 1px dotted $grey;
+  position: relative;
+
   &__wrapper-img {
     width: 100vw;
     height: 100vh;
@@ -82,6 +89,27 @@ body {
 }
 
 .about {
+  position: relative;
+  &__wave-top {
+    position: absolute;
+    bottom: 99%;
+    margin-left: -10rem;
+  }
+  &__title {
+    position: relative;
+    user-select: none;
+  }
+  &__title::after {
+    content: "";
+    width: 3rem;
+    height: 0.5rem;
+    position: absolute;
+    border-radius: 20px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $orange;
+  }
   &__wrapper {
     &-img {
       max-height: 20rem;
@@ -100,6 +128,24 @@ body {
 }
 
 .skills {
+  &__wave-top {
+    margin-left: -10rem;
+  }
+  &__title {
+    position: relative;
+    user-select: none;
+  }
+  &__title::after {
+    content: "";
+    width: 3rem;
+    height: 0.5rem;
+    position: absolute;
+    border-radius: 20px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $orange;
+  }
   &__type {
     &-bar {
       background: rgba(255, 255, 255, 0.1);
@@ -132,6 +178,79 @@ body {
         }
       }
     }
+  }
+}
+
+.work {
+  &__wave-top {
+    margin-left: -10rem;
+  }
+  &__title {
+    position: relative;
+    user-select: none;
+  }
+  &__title::after {
+    content: "";
+    width: 3rem;
+    height: 0.5rem;
+    position: absolute;
+    border-radius: 20px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $orange;
+  }
+  &__item {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    &-wrapper-img {
+      border-radius: 20px;
+      width: 15rem;
+      height: 15rem;
+      overflow: hidden;
+      .work__item-img {
+        object-fit: cover;
+      }
+    }
+    &-description {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+      color: $orange;
+      z-index: 23;
+      transition: all 0.5s ease-in-out;
+      text-shadow: 0px 3px 10px $orange;
+    }
+  }
+  &__item-overlay:hover,
+  &__item-description:hover {
+    opacity: 1;
+  }
+}
+
+.contact {
+  &__wave-top {
+    margin-left: -10rem;
+  }
+  &__title {
+    position: relative;
+    user-select: none;
+  }
+  &__title::after {
+    content: "";
+    width: 3rem;
+    height: 0.5rem;
+    position: absolute;
+    border-radius: 20px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $orange;
   }
 }
 // Media import

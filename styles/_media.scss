@@ -1,3 +1,6 @@
+@media (min-width: 576px) {
+}
+
 @media (min-width: 768px) {
   .skills {
     &__type {
@@ -6,11 +9,21 @@
       }
     }
   }
+  .work {
+    &__item {
+      &-description {
+        opacity: 0;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
   #navigation {
     left: 0;
+  }
+  .navigation {
+    background-color: $blueNav;
   }
   .home {
     &__wrapper {
@@ -36,6 +49,12 @@
   }
   .work {
     margin-left: 10rem;
+    &__item {
+      &-wrapper-img {
+        width: 18rem;
+        height: 18rem;
+      }
+    }
   }
   .contact {
     margin-left: 10rem;

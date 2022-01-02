@@ -11,16 +11,16 @@
   </head>
   <body data-bs-spy="scroll" data-bs-offset="60" data-bs-target="#myNavbar">
     <!-- toggler -->
-    <div class="toggler mobile-nav-toggle d-lg-none d-flex align-items-center justify-content-center rounded position-fixed">
-      <i class="fas fa-list fs-1 toggler__icon"></i>
+    <div class="toggler mobile-nav-toggle d-lg-none d-flex align-items-center justify-content-center rounded position-fixed" >
+      <a class="fas fa-list fs-1 toggler__icon" id="toggler" onclick="toggleFunction()"></a>
     </div>
     <!-- Main navigation -->
-    <nav class="navigation navbar navbar-dark justify-content-between flex-column" id="navigation">
-      <div class="navigation__media">
+    <nav class="navigation navbar navbar-dark justify-content-between flex-column p-0" id="navigation">
+      <div class="navigation__media text-center pt-5">
         <div class="navigation__img-wrapper">
-          <img src="" alt="" class="img" />
+          <img src="img/Vanilla-0.5s-150px.svg" alt="" class="img" />
         </div>
-        <h2 class="navigation__name fs-3">Radek</h2>
+        
         <p class="navigation__title fs-6">Front End Developer</p>
       </div>
       <div class="navigation__main d-flex justify-content-center">
@@ -43,7 +43,7 @@
         </ul>
       </div>
       <footer class="navigation__footer text-center">
-        <p class="navigation__footer-text m-0">2021&copy; Radek</p>
+        <p class="navigation__footer-text m-0 pb-4">2021&copy;</p>
       </footer>
     </nav>
     <!-- Home -->
@@ -55,11 +55,14 @@
         <h1 class="home__wrapper-title">Hi, I'm Radek</h1>
         <p class="home__wrapper-text">Frond End Developer</p>
       </div>
+
     </section>
     <!-- About -->
-    <section class="about py-md-3" id="about" data-aos="fade-up"
+
+    <section class="about py-md-3"  data-aos="fade-up"
     data-aos-duration="1000">
-      <h2 class="text-center my-4">About me</h2>
+      <img src="img/aboutTop.svg" alt="" class="about__wave-top" >
+      <h2 class="about__title text-center py-4" id="about">About me</h2>
       <div class="about__wrapper">
         <div class="row px-md-5 m-0">
           <div class="col-lg-4 d-flex justify-content-center">
@@ -69,7 +72,7 @@
           </div>
           <div class="about__info col-lg-8">
             <div class="row text-center h-100 d-flex align-content-center">
-              <div class="col-sm-6">
+              <div class="col-sm-6 mt-3 mt-lg-0">
                 <ul class="about__info-list">
                   <li>
                     <div class="about__info-li mb-3">
@@ -84,14 +87,14 @@
                     </div>
                   </li>                  
                   <li>
-                    <div class="about__info-li mb-3">
+                    <div class="about__info-li mb-0 mb-md-3">
                       <strong>Telephone:</strong>
                       <p class="m-0"> +48 537 382 406</p>
                     </div>
                   </li>
                 </ul>
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-6 mt-0 mt-sm-3 mt-lg-0">
                 <ul class="about__info-list">
                   <li>
                     <div class="about__info-li mb-3">
@@ -116,11 +119,13 @@
           </div>
         </div>
       </div>
+      
     </section>
     <!-- Skills -->
-    <section class="skills" id="skills" data-aos="fade-up"
+    <section class="skills"  data-aos="fade-up"
     data-aos-duration="1000">
-      <h2 class="text-center my-4">Skills</h2>
+    <img src="img/skillsTop.svg" alt="" class="skills__wave-top" >
+      <h2 class="skills__title text-center py-4" id="skills">Skills</h2>
       <div class="row m-0 mb-md-5">
         <div class="col-md-6 px-0 d-flex justify-content-center">
           <div class="skills__type">
@@ -135,7 +140,7 @@
           </div>
         </div>
         <div class="col-md-6 px-0 d-flex justify-content-center">
-          <div class="skills__type" >
+          <div class="skills__type mb-5 mb-md-0" >
             <h4 class="text-center py-3">JavaScript:</h4>
             <div class="skills__type-bar">
               <div class="skills__type-bar-progress skill3"></div>
@@ -149,13 +154,49 @@
       </div>
     </section>
     <!-- My works -->
-    <section class="work" id="work">
-      <h2 class="text-center my-4">My work</h2>
-
+    <section class="work" id="work" data-aos="fade-up"
+    data-aos-duration="1000">
+      <img src="img/workTop.svg" alt="" class="work__wave-top" >
+      <h2 class="work__title text-center py-4">My work</h2>
+      <div class="row mt-4 mx-0">
+        <div class="col-md-4 d-flex justify-content-center">
+          <a class="work__item" href="#">
+            <div class="work__item-wrapper-img">
+              <img src="/img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100">
+            </div>
+            <div class="work__item-description d-flex align-items-center justify-content-center">
+              <h4 class="fs-3 fw-bold">Project 1</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 my-3 my-md-0 d-flex justify-content-center">
+          <a class="work__item" href="#">
+            <div class="work__item-wrapper-img">
+              <img src="/img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100">
+            </div>
+            <div class="work__item-description d-flex align-items-center justify-content-center">
+              <h4 class="fs-3 fw-bold">Project 2</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a class="work__item" href="#">
+            <div class="work__item-wrapper-img">
+              <img src="/img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100">
+            </div>
+            <div class="work__item-description d-flex align-items-center justify-content-center">
+              <h4 class="fs-3 fw-bold">Project 3</h4>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
     <!-- Contact -->
-    <section class="contact" id="contact">
-      <h2 class="text-center my-4">Contact me</h2>
+    <section class="contact" id="contact" data-aos="fade-up"
+    data-aos-duration="1000">
+      <img src="img/contactTop.svg" alt="" class="contact__wave-top" >
+
+      <h2 class="contact__title text-center py-4">Contact me</h2>
 
     </section>
     <!-- Scripts -->
@@ -166,7 +207,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script>
-      AOS.init();
+      AOS.init({once: true, disable: 'mobile'});
       VANTA.NET({
         el: "#bcg",
         mouseControls: true,
