@@ -65,6 +65,17 @@ body {
   text-shadow: 0px 0px 10px #ec255a;
 }
 
+.navigation__link {
+  color: #faedf0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.navigation__link:hover {
+  color: #ec255a;
+  text-shadow: 0px 0px 2px #ec255a;
+}
+
 .home {
   overflow: hidden;
   position: relative;

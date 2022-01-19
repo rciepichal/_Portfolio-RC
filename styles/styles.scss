@@ -68,6 +68,14 @@ body {
       }
     }
   }
+  &__link {
+    color: $grey;
+    transition: 0.3s all;
+  }
+  &__link:hover {
+    color: $orange;
+    text-shadow: 0px 0px 2px $orange;
+  }
 }
 
 // Home section
