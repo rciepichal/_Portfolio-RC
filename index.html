@@ -53,7 +53,7 @@
       </div>
       <div class="home__wrapper p-5 text-center">
         <h1 class="home__wrapper-title">Hi, I'm Radek</h1>
-        <p class="home__wrapper-text">Frond End Developer</p>
+        <p class="home__wrapper-text">Front End Developer</p>
       </div>
 
     </section>
@@ -198,6 +198,36 @@
       <img src="img/contactTop.svg" alt="" class="contact__wave-top" >
 
       <h2 class="contact__title text-center py-4">Contact me</h2>
+
+
+      <div class="form__wrapper d-flex justify-content-center px-3 my-5">
+        <form action="" class="form__form">
+          <div class="row">
+            <div class="form-floating mb-3 col-12 col-sm-6">
+              <input type="email" class="form-control" id="floatingEmailInput" placeholder="name@example.com" required>
+              <label for="floatingEmailInput" class="form__label ps-4">Email address</label>
+            </div>
+            <div class="form-floating mb-3 col-12 col-sm-6">
+              <input type="text" class="form-control" id="floatingNameInput" placeholder="John"required>
+              <label for="floatingNameInput" class="form__label ps-4">Name</label>            
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingTopicInput" placeholder="Subject of your message"required>
+            <label for="floatingTopicInput" class="form__label">Topic</label>            
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control form__textarea" placeholder="Leave a comment here" id="floatingMessageArea"></textarea>
+            <label for="floatingMessageArea" class="form__label">Message</label>          
+          </div>
+          <div class="form__button-wrapper">
+            <button type="submit" class="form__button">Submit</button>
+            
+          </div>
+        </form>
+      </div>
+  
+
 
     </section>
     <!-- Scripts -->

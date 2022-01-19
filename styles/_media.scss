@@ -16,6 +16,13 @@
       }
     }
   }
+  .contact {
+    .form__wrapper {
+      .form__form {
+        min-width: 600px;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {

@@ -1,5 +1,5 @@
-@import "variables";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
 html {
   scroll-behavior: smooth;
 }
@@ -7,7 +7,7 @@ html {
 body {
   background-color: $mainBlue;
   color: $grey;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 // Scroll style
 ::-webkit-scrollbar {
@@ -116,7 +116,7 @@ body {
     user-select: none;
   }
   &__title::after {
-    content: "";
+    content: '';
     width: 3rem;
     height: 0.5rem;
     position: absolute;
@@ -152,7 +152,7 @@ body {
     user-select: none;
   }
   &__title::after {
-    content: "";
+    content: '';
     width: 3rem;
     height: 0.5rem;
     position: absolute;
@@ -206,7 +206,7 @@ body {
     user-select: none;
   }
   &__title::after {
-    content: "";
+    content: '';
     width: 3rem;
     height: 0.5rem;
     position: absolute;
@@ -258,7 +258,7 @@ body {
     user-select: none;
   }
   &__title::after {
-    content: "";
+    content: '';
     width: 3rem;
     height: 0.5rem;
     position: absolute;
@@ -268,8 +268,77 @@ body {
     transform: translateX(-50%);
     background-color: $orange;
   }
+  .form__wrapper {
+    // max-width: 50rem;
+    .form__label {
+      color: black;
+      caret-color: $orange;
+    }
+    .form__textarea {
+      min-height: 10rem;
+    }
+    .form__button-wrapper {
+      display: flex;
+      justify-content: center;
+      .form__button {
+        padding: 0.8em 1.7em;
+        background-color: transparent;
+        border-radius: 0.3em;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.5s;
+        font-weight: 400;
+        font-size: 17px;
+        border: 1px solid;
+        font-family: inherit;
+        text-transform: uppercase;
+        color: $orange;
+        z-index: 1;
+        width: 20rem;
+      }
+
+      .form__button::before,
+      .form__button::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: $orange;
+        transition: 0.5s ease-in-out;
+      }
+
+      .form__button::before {
+        top: -1em;
+        left: -1em;
+      }
+
+      .form__button::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+      }
+
+      .form__button:hover::before,
+      .form__button:hover::after {
+        height: 410px;
+        width: 410px;
+      }
+
+      .form__button:hover {
+        color: rgb(10, 25, 30);
+      }
+
+      .form__button:active {
+        filter: brightness(0.8);
+      }
+    }
+  }
 }
 // Media import
 
-@import "keyframes";
-@import "media";
+@import 'keyframes';
+@import 'media';
