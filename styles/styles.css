@@ -7,6 +7,7 @@ body {
   background-color: #161853;
   color: #faedf0;
   font-family: 'Roboto', sans-serif;
+  overflow-x: none;
 }
 
 ::-webkit-scrollbar {
@@ -259,6 +260,10 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #ec255a;
+}
+
+.work__btn {
+  width: 130px;
 }
 
 .work__item {

@@ -8,6 +8,7 @@ body {
   background-color: $mainBlue;
   color: $grey;
   font-family: 'Roboto', sans-serif;
+  overflow-x: none;
 }
 // Scroll style
 ::-webkit-scrollbar {
@@ -223,6 +224,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     background-color: $orange;
+  }
+  &__btn {
+    width: 130px;
   }
   &__item {
     position: relative;

@@ -164,37 +164,58 @@
     <section class="work" id="work" data-aos="fade-up"
     data-aos-duration="1000">
       <img src="img/workTop.svg" alt="" class="work__wave-top" >
-      <h2 class="work__title text-center py-4">My work</h2>
-      <div class="row mt-4 mx-0">
-        <div class="col-md-4 d-flex justify-content-center">
-          <a class="work__item" href="#">
-            <div class="work__item-wrapper-img">
-              <img src="img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100">
+      <div class="work__title">
+        <h2 class="text-center py-4">My work</h2>
+      </div>
+      <div class="work__btn-wrapper d-flex justify-content-center">
+        <ul class="work__btn-list p-0 mt-3" id="filter-btns">
+          <li class="work__btn btn btn-outline-primary active" data-target="all">All</li>
+          <li class="work__btn btn btn-outline-primary" data-target="webPages">Web Pages</li>
+          <li class="work__btn btn btn-outline-primary" data-target="smallProjects">Small Projects</li>
+        </ul>
+      </div>
+      <div class="work__list row mt-4 mx-0">
+        <div class="work__element col-md-4"data-id='webPages'>
+          <div class=" d-flex justify-content-center" >
+            <div class="work__item">
+              <a class="" href="#">
+                <div class="work__item-wrapper-img">
+                  <img src="img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100">
+                </div>
+                <div class="work__item-description d-flex align-items-center justify-content-center">
+                  <h4 class="fs-3 fw-bold">Project 1</h4>
+                </div>
+              </a>
             </div>
-            <div class="work__item-description d-flex align-items-center justify-content-center">
-              <h4 class="fs-3 fw-bold">Project 1</h4>
-            </div>
-          </a>
+          </div>
         </div>
-        <div class="col-md-4 my-3 my-md-0 d-flex justify-content-center">
-          <a class="work__item" href="#">
-            <div class="work__item-wrapper-img">
-              <img src="img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100">
+        <div class="work__element col-md-4 my-3 my-md-0" data-id="smallProjects">
+          <div class=" d-flex justify-content-center">
+            <div class="work__item">
+              <a class="" href="#">
+                <div class="work__item-wrapper-img">
+                  <img src="img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100" >
+                </div>
+                <div class="work__item-description d-flex align-items-center justify-content-center">
+                  <h4 class="fs-3 fw-bold">Project 2</h4>
+                </div>
+              </a>
             </div>
-            <div class="work__item-description d-flex align-items-center justify-content-center">
-              <h4 class="fs-3 fw-bold">Project 2</h4>
-            </div>
-          </a>
+          </div>
         </div>
-        <div class="col-md-4 d-flex justify-content-center">
-          <a class="work__item" href="#">
-            <div class="work__item-wrapper-img">
-              <img src="img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100">
+        <div class="work__element col-md-4" data-id="smallProjects">
+          <div class=" d-flex justify-content-center">
+            <div class="work__item">
+              <a class="" href="#">
+                <div class="work__item-wrapper-img">
+                  <img src="img/portfolio1.jpg" alt="" class="work__item-img h-100 w-100">
+                </div>
+                <div class="work__item-description d-flex align-items-center justify-content-center">
+                  <h4 class="fs-3 fw-bold">Project 3</h4>
+                </div>
+              </a>
             </div>
-            <div class="work__item-description d-flex align-items-center justify-content-center">
-              <h4 class="fs-3 fw-bold">Project 3</h4>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
