@@ -20,6 +20,7 @@ for (let i = 0; i < filterButtons.length; i++) {
     const target = filterButtons[i].getAttribute('data-target');
     for (let k = 0; k < filterItem.length; k++) {
       filterItem[k].style.display = 'none';
+      filterItem[k].classList.add('delete');
       if (target == filterItem[k].getAttribute('data-id')) {
         filterItem[k].style.display = 'block';
       }
