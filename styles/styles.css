@@ -284,48 +284,67 @@ body {
   width: 130px;
 }
 
-.work__item {
+.work__btn2 {
+  width: 130px;
+  background-color: #ec255a;
+}
+
+.work__list {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.work__list-element {
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.work__item-wrapper-img {
-  border-radius: 20px;
-  width: 15rem;
-  height: 10rem;
   overflow: hidden;
+  border-radius: 20px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-.work__item-wrapper-img .work__item-img {
+.work__list-element a img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 0;
+  -webkit-filter: blur(2px) brightness(30%);
+          filter: blur(2px) brightness(30%);
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
-.work__item-description {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 1;
+.work__list-element a h4 {
   color: #ec255a;
-  z-index: 23;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  text-shadow: 0px 3px 10px #ec255a;
+  text-shadow: 0px 0px 15px #ec255a;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  white-space: nowrap;
 }
 
-.work__item-overlay:hover, .work__item-description:hover {
-  opacity: 1;
+.work__list-element a:hover img {
+  -webkit-filter: blur(0px) brightness(100%);
+          filter: blur(0px) brightness(100%);
 }
 
-.fade {
+.work__list-element a:hover h4 {
   opacity: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  top: 100%;
 }
 
 .contact__wave-top {
