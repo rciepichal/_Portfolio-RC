@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
 html {
   scroll-behavior: smooth;
@@ -27,7 +28,7 @@ body {
 .toggler {
   right: 1rem;
   top: 1rem;
-  z-index: 1;
+  z-index: 4;
   background: none;
   transition: all 0.4s;
   cursor: pointer;
@@ -47,6 +48,16 @@ body {
 }
 
 // Nav section
+#overlay {
+  position: fixed;
+  height: 100vh;
+  background-color: #00000081;
+  z-index: 3;
+  transition: all 0.5s linear;
+}
+.ovActive {
+  width: 100vw;
+}
 .navigation {
   height: 100vh;
   position: fixed;
@@ -59,6 +70,7 @@ body {
   transition: all 0.5s;
   padding: 15px;
   overflow-y: auto;
+
   &__media {
     display: flex;
     flex-direction: column;
@@ -92,10 +104,17 @@ body {
 .home {
   overflow: hidden;
   position: relative;
-
+  &__scrollDown {
+    position: absolute;
+    bottom: 15%;
+    right: 1%;
+    font-size: 2rem;
+    color: $grey;
+    animation: scrollDown 1s ease-in-out infinite;
+  }
   &__wrapper-img {
     width: 100vw;
-    height: 100vh;
+    height: 113vh;
     position: relative;
     .home__img {
       position: absolute;
@@ -105,8 +124,7 @@ body {
     user-select: none;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
     border-radius: 10px;
     position: absolute;
     top: 50%;
@@ -118,6 +136,7 @@ body {
     }
     &-text {
       font-size: 2rem;
+      margin: 0;
     }
   }
 }
@@ -134,15 +153,7 @@ body {
     user-select: none;
   }
   &__title::after {
-    content: '';
-    width: 3rem;
-    height: 0.5rem;
-    position: absolute;
-    border-radius: 20px;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $orange;
+    @include titleAfter;
   }
   &__wrapper {
     &-img {
@@ -170,16 +181,53 @@ body {
     user-select: none;
   }
   &__title::after {
-    content: '';
-    width: 3rem;
-    height: 0.5rem;
-    position: absolute;
-    border-radius: 20px;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $orange;
+    @include titleAfter;
   }
+  &__wrapper {
+    .skills__primary {
+      gap: 30px;
+      margin: 10px;
+      .skill {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        font-size: 1.1rem;
+        i {
+          font-size: 2.2rem;
+          filter: drop-shadow(0px 0px 5px $orange);
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            filter: drop-shadow(0px 0px 25px $orange);
+          }
+        }
+      }
+    }
+    .skills__secondary {
+      gap: 30px;
+      margin: 10px;
+      .skill {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        font-size: 1.1rem;
+        i {
+          font-size: 1.5rem;
+          filter: drop-shadow(0px 0px 5px $orange);
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            filter: drop-shadow(0px 0px 15px $orange);
+          }
+        }
+      }
+    }
+  }
+
   &__type {
     &-bar {
       background: rgba(255, 255, 255, 0.1);
@@ -224,23 +272,44 @@ body {
     user-select: none;
   }
   &__title::after {
-    content: '';
-    width: 3rem;
-    height: 0.5rem;
-    position: absolute;
-    border-radius: 20px;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $orange;
+    @include titleAfter;
   }
   &__btn {
     width: 130px;
+    padding: 4px 7px;
+    border-radius: 10px 10px 0 0;
+    margin: 10px;
+    border: none;
+    color: $grey;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0;
+      height: 1px;
+      background-color: $orange;
+      transition: all 0.3s linear;
+    }
+    &:hover {
+      color: $grey;
+      background-color: $blue;
+      &::after {
+        width: 100%;
+      }
+    }
   }
-  &__btn2 {
-    width: 130px;
-    background-color: $orange;
+  .active-filter {
+    border-bottom: 1px solid $orange;
   }
+
   &__list {
     flex-flow: row wrap;
 
@@ -307,15 +376,7 @@ body {
     user-select: none;
   }
   &__title::after {
-    content: '';
-    width: 3rem;
-    height: 0.5rem;
-    position: absolute;
-    border-radius: 20px;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $orange;
+    @include titleAfter;
   }
   .form__wrapper {
     // max-width: 50rem;

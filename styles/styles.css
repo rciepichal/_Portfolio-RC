@@ -26,7 +26,7 @@ body {
 .toggler {
   right: 1rem;
   top: 1rem;
-  z-index: 1;
+  z-index: 4;
   background: none;
   transition: all 0.4s;
   cursor: pointer;
@@ -42,6 +42,18 @@ body {
 
 .mobile-nav-active {
   left: 0 !important;
+}
+
+#overlay {
+  position: fixed;
+  height: 100vh;
+  background-color: #00000081;
+  z-index: 3;
+  transition: all 0.5s linear;
+}
+
+.ovActive {
+  width: 100vw;
 }
 
 .navigation {
@@ -83,9 +95,18 @@ body {
   overflow: hidden;
   position: relative;
 }
+.home__scrollDown {
+  position: absolute;
+  bottom: 15%;
+  right: 1%;
+  font-size: 2rem;
+  color: #faedf0;
+  -webkit-animation: scrollDown 1s ease-in-out infinite;
+          animation: scrollDown 1s ease-in-out infinite;
+}
 .home__wrapper-img {
   width: 100vw;
-  height: 100vh;
+  height: 113vh;
   position: relative;
 }
 .home__wrapper-img .home__img {
@@ -98,8 +119,8 @@ body {
           user-select: none;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border-radius: 10px;
   position: absolute;
   top: 50%;
@@ -112,6 +133,7 @@ body {
 }
 .home__wrapper-text {
   font-size: 2rem;
+  margin: 0;
 }
 
 .about {
@@ -139,6 +161,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background-color: #ec255a;
+  -webkit-animation: stretch 3s linear infinite;
+          animation: stretch 3s linear infinite;
 }
 .about__wrapper-img {
   max-height: 20rem;
@@ -175,6 +199,50 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background-color: #ec255a;
+  -webkit-animation: stretch 3s linear infinite;
+          animation: stretch 3s linear infinite;
+}
+.skills__wrapper .skills__primary {
+  gap: 30px;
+  margin: 10px;
+}
+.skills__wrapper .skills__primary .skill {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  font-size: 1.1rem;
+}
+.skills__wrapper .skills__primary .skill i {
+  font-size: 2.2rem;
+  filter: drop-shadow(0px 0px 5px #ec255a);
+  transition: all 0.5s ease-in-out;
+}
+.skills__wrapper .skills__primary .skill i:hover {
+  filter: drop-shadow(0px 0px 25px #ec255a);
+}
+.skills__wrapper .skills__secondary {
+  gap: 30px;
+  margin: 10px;
+}
+.skills__wrapper .skills__secondary .skill {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  font-size: 1.1rem;
+}
+.skills__wrapper .skills__secondary .skill i {
+  font-size: 1.5rem;
+  filter: drop-shadow(0px 0px 5px #ec255a);
+  transition: all 0.5s ease-in-out;
+}
+.skills__wrapper .skills__secondary .skill i:hover {
+  filter: drop-shadow(0px 0px 15px #ec255a);
 }
 .skills__type-bar {
   background: rgba(255, 255, 255, 0.1);
@@ -229,13 +297,42 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background-color: #ec255a;
+  -webkit-animation: stretch 3s linear infinite;
+          animation: stretch 3s linear infinite;
 }
 .work__btn {
   width: 130px;
+  padding: 4px 7px;
+  border-radius: 10px 10px 0 0;
+  margin: 10px;
+  border: none;
+  color: #faedf0;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s linear;
 }
-.work__btn2 {
-  width: 130px;
+.work__btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
   background-color: #ec255a;
+  transition: all 0.3s linear;
+}
+.work__btn:hover {
+  color: #faedf0;
+  background-color: #292c6d;
+}
+.work__btn:hover::after {
+  width: 100%;
+}
+.work .active-filter {
+  border-bottom: 1px solid #ec255a;
 }
 .work__list {
   flex-flow: row wrap;
@@ -301,6 +398,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background-color: #ec255a;
+  -webkit-animation: stretch 3s linear infinite;
+          animation: stretch 3s linear infinite;
 }
 .contact .form__wrapper .form__label {
   color: black;
@@ -363,43 +462,27 @@ body {
   filter: brightness(0.8);
 }
 
-@-webkit-keyframes load {
+@-webkit-keyframes scrollDown {
   0% {
-    width: 0;
+    bottom: 15%;
+  }
+  50% {
+    bottom: 17%;
   }
   100% {
-    width: 100%;
+    bottom: 15%;
   }
 }
 
-@keyframes load {
+@keyframes scrollDown {
   0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes positionBcg {
-  0% {
-    background-position: 100%;
+    bottom: 15%;
   }
   50% {
-    background-position: 0;
+    bottom: 17%;
   }
   100% {
-    background-position: 100%;
-  }
-}
-@keyframes positionBcg {
-  0% {
-    background-position: 100%;
-  }
-  50% {
-    background-position: 0;
-  }
-  100% {
-    background-position: 100%;
+    bottom: 15%;
   }
 }
 @media (min-width: 768px) {

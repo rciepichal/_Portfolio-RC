@@ -1,0 +1,12 @@
+@mixin titleAfter {
+  content: '';
+  width: 3rem;
+  height: 0.5rem;
+  position: absolute;
+  border-radius: 20px;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $orange;
+  animation: stretch 3s linear infinite;
+}

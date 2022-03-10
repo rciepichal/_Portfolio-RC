@@ -1,20 +1,11 @@
-@keyframes load {
+@keyframes scrollDown {
   0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes positionBcg {
-  0% {
-    background-position: 100%;
+    bottom: 15%;
   }
   50% {
-    background-position: 0;
+    bottom: 17%;
   }
   100% {
-    background-position: 100%;
+    bottom: 15%;
   }
 }
