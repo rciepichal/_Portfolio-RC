@@ -47,7 +47,7 @@ body {
 #overlay {
   position: fixed;
   height: 100vh;
-  background-color: #00000081;
+  background-color: rgba(0, 0, 0, 0.5058823529);
   z-index: 3;
   transition: all 0.5s linear;
 }
@@ -456,7 +456,7 @@ body {
   width: 410px;
 }
 .contact .form__wrapper .form__button-wrapper .form__button:hover {
-  color: #0a191e;
+  color: rgb(10, 25, 30);
 }
 .contact .form__wrapper .form__button-wrapper .form__button:active {
   filter: brightness(0.8);
@@ -504,7 +504,7 @@ body {
   }
 
   .navigation {
-    background-color: #292c6d93;
+    background-color: rgba(41, 44, 109, 0.5764705882);
   }
 
   .home__wrapper {
